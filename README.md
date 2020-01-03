@@ -26,3 +26,8 @@ jupyter notebook password
 https://github.com/aymericdamien/TensorFlow-Examples
 https://github.com/NVIDIA-AI-IOT/jetbot/wiki/third-party-kits
 ```
+## Benchmark
+
+```txt
+https://devtalk.nvidia.com/default/topic/1050377/jetson-nano/deep-learning-inference-benchmarking-instructions/
+```
