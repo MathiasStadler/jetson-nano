@@ -42,7 +42,7 @@ cd /usr/src/tensorrt/bin
 ./trtexec --output=prob --deploy=../data/googlenet/inception_v4.prototxt --fp16 --batch=1
 
 cd /usr/src/tensorrt/bin
-./trtexec --output=prob --deploy=../data/googlenet/VGG19_N2.prototxt --fp16 --batch=1
+./trtexec --output=prob --deploy=../data/googlenet/vgg19_N2.prototxt --fp16 --batch=1
 
 sudo cp ~/Downloads/output_graph.uff /usr/src/tensorrt/data/googlenet 
 
@@ -55,3 +55,30 @@ sudo cp ~/Downloads/pose_estimation.prototxt /usr/src/tensorrt/data/googlenet
 cd /usr/src/tensorrt/bin/
 sudo ./trtexec --output=Mconv7_stage2_L2 --deploy=../data/googlenet/pose_estimation.prototxt --fp16 --batch=1
 
+sudo wget --no-check-certificate 'https://nvidia.box.com/shared/static/a99l8ttk21p3tubjbyhfn4gh37o45rn8.gz' -O Super-Resolution-BSD500.tar.gz
+sudo tar -xvf Super-Resolution-BSD500.tar.gz
+
+sudo apt-get install libgstreamer-plugins-base1.0-dev libgstreamer1.0-dev libgflags-dev
+
+
+
+cd ~
+git clone -b restructure https://github.com/NVIDIA-AI-IOT/deepstream_reference_apps
+
+cd ~/deepstream_reference_apps/yolo
+sudo sh prebuild.sh
+
+cd apps/trt-yolo
+mkdir build && cd build
+cmake -D CMAKE_BUILD_TYPE=Release ..
+make && sudo make install
+cd ../../..
+
+# download from here https://drive.google.com/drive/folders/1dJzDlQm8Pee0giSYorui_1e0N0bie65t
+# file: test_images.txt
+
+
+
+ cd ~/deepstream_reference_apps/yolo/data
+
+ 
