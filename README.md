@@ -31,3 +31,8 @@ https://github.com/NVIDIA-AI-IOT/jetbot/wiki/third-party-kits
 ```txt
 https://devtalk.nvidia.com/default/topic/1050377/jetson-nano/deep-learning-inference-benchmarking-instructions/
 ```
+
+
+## NVIDIA TenserRT for jetson 
+
+https://docs.nvidia.com/deeplearning/sdk/tensorrt-developer-guide/index.html
