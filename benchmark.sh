@@ -55,6 +55,9 @@ sudo cp ~/Downloads/pose_estimation.prototxt /usr/src/tensorrt/data/googlenet
 cd /usr/src/tensorrt/bin/
 sudo ./trtexec --output=Mconv7_stage2_L2 --deploy=../data/googlenet/pose_estimation.prototxt --fp16 --batch=1
 
+
+cd ~
+cd ~/Downloads
 sudo wget --no-check-certificate 'https://nvidia.box.com/shared/static/a99l8ttk21p3tubjbyhfn4gh37o45rn8.gz' -O Super-Resolution-BSD500.tar.gz
 sudo tar -xvf Super-Resolution-BSD500.tar.gz
 
@@ -77,8 +80,14 @@ cd ../../..
 # download from here https://drive.google.com/drive/folders/1dJzDlQm8Pee0giSYorui_1e0N0bie65t
 # file: test_images.txt
 
+sudo cp ~/Downloads/test_images.txt ~/deepstream_reference_apps/yolo/data/
+
+cd ~/deepstream_reference_apps/yolo/data
+
+# prepare backup 
+cp test_images.txt test_images.txt_backup
+
+#replace home
+sed  -i "s@^/home/sridhar@$HOME@" test_images.txt 
 
 
- cd ~/deepstream_reference_apps/yolo/data
-
- 

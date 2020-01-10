@@ -36,3 +36,16 @@ https://devtalk.nvidia.com/default/topic/1050377/jetson-nano/deep-learning-infer
 ## NVIDIA TenserRT for jetson 
 
 https://docs.nvidia.com/deeplearning/sdk/tensorrt-developer-guide/index.html
+
+
+## jetson memory
+https://docs.nvidia.com/cuda/cuda-for-tegra-appnote/index.html#effective-usage-unified-memory
+
+## cuda tutorial
+https://jhui.github.io/2017/03/06/CUDA/
+
+## cuda reference
+http://www.icl.utk.edu/~mgates3/docs/cuda.html
+
+## um
+nvprof --unified-memory-profiling per-process-device ./test1
