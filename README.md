@@ -59,3 +59,11 @@ nvcc -m 64 --resource-usage -gencode arch=compute_53,code=sm_53 -I/usr/local/cud
 
 ## kurs in deutsch
 https://git.informatik.tu-freiberg.de/reinhar2/parallelrechner2019/tree/master/05_0_CUDA_1
+
+
+## thread_group
+http://on-demand.gputechconf.com/gtc/2017/presentation/s7622-Kyrylo-perelygin-robust-and-scalable-cuda.pdf
+
+
+## nsight eclipse
+https://docs.nvidia.com/cuda/nsight-eclipse-edition-getting-started-guide/index.html
