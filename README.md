@@ -49,3 +49,13 @@ http://www.icl.utk.edu/~mgates3/docs/cuda.html
 
 ## um
 nvprof --unified-memory-profiling per-process-device ./test1
+
+## nvprof trace
+nvprof --print-gpu-trace ./unified_64align.out
+
+
+## gencode
+nvcc -m 64 --resource-usage -gencode arch=compute_53,code=sm_53 -I/usr/local/cuda-10.0/samples/common/inc -o sgemm ./sgemm.cu
+
+## kurs in deutsch
+https://git.informatik.tu-freiberg.de/reinhar2/parallelrechner2019/tree/master/05_0_CUDA_1
